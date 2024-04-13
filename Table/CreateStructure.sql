@@ -38,5 +38,6 @@ begin
 	alter table dbo.Basket add constraint CK_Basket_Quantity check (Quantity >= 0)
 	alter table dbo.Basket add constraint CK_Basket_Value check (Value >= 0)
 	alter table dbo.Basket add constraint DF_Basket_PurchaseDate default getdate()
+	alter table dbo.Basket add constraint DF_Basket_DiscountValue default 0
 end
 
